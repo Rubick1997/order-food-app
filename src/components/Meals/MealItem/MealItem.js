@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./MealItem.module.css";
+import MealItemForm from "./MealItemForm";
 
-function MealItem({meal}) {
+function MealItem({ meal }) {
 	return (
 		<li className={classes.meal}>
 			<div>
@@ -9,7 +10,9 @@ function MealItem({meal}) {
 				<div className={classes.description}>{meal.description}</div>
 				<div className={classes.price}>${meal.price.toFixed(2)}</div>
 			</div>
-			<div></div>
+			<div>
+				<MealItemForm />
+			</div>
 		</li>
 	);
 }
